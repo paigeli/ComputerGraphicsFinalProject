@@ -1,0 +1,333 @@
+{
+  "RenderOption" : "Rasterization",
+
+  "Material" : {
+    "redRubber" : {
+      "ka" : [0.05,	0.0,	0.0],
+      "kd" : [0.5,	0.4,	0.4],
+      "ks" : [0.7,	0.04,	0.04],
+      "n"  : 78.125,
+      "reflect" : 0
+    },
+
+    "ruby" : {
+      "ka" : [0.1745,	0.01175,	0.01175],
+      "kd" : [0.61424,	0.04136,	0.04136],
+      "ks" : [0.727811,	0.626959,	0.626959],
+      "n"  : 60,
+      "reflect" : 0
+    },
+
+    "gold" : {
+      "ka" : [0.24725, 0.1995,	0.0745],
+      "kd" : [0.75164, 0.60648, 0.22648],
+      "ks" : [0.628281,	0.555802,	0.366065],
+      "n"  : 40,
+      "reflect" : 0
+    },
+
+    "pearl" : {
+      "ka" : [0.25,	0.20725,	0.20725],
+      "kd" : [1,	0.829,	0.829],
+      "ks" : [0.296648,	0.296648,	0.296648],
+      "n"  : 8,
+      "reflect" : 0.9
+    },
+
+    "emerald" : {
+      "ka" : [0.0215,	0.1745,	0.0215],
+      "kd" : [0.07568,	0.61424,	0.07568],
+      "ks" : [0.633,	0.727811,	0.633],
+      "n"  : 60,
+      "reflect" : 0
+    },
+
+    "obsidian" : {
+      "ka" : [0.05375,	0.05,	0.06625],
+      "kd" : [0.18275,	0.17,	0.22525],
+      "ks" : [0.332741,	0.328634,	0.346435],
+      "n"  : 30,
+      "reflect" : 0
+    },
+
+    "cyanPlastic" : {
+      "ka" : [0.0,	0.05,	0.05],
+      "kd" : [0.4,	0.5,	0.5],
+      "ks" : [0.04,	0.7,	0.7],
+      "n"  : 78.125,
+      "reflect" : 0.3
+    }
+  },
+
+  "Plane" :  {
+    "Ground" : {
+      "material" : {
+        "ka" : [0.0,	0.05,	0.05],
+        "kd" : [0.4,	0.5,	0.5],
+        "ks" : [0.04,	0.7,	0.7],
+        "n"  : 78.125,
+        "reflect" : 0.3
+      },
+      "center"   : [0, -10, -100],
+      "normal"   : [0,1,0],
+      "name"     : "ground"
+    }
+
+  },
+
+  "Mesh" : {
+    "one" : {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [1.0, -3.0, -7.0],
+      "rotateDegree" : 30,
+      "rotateAxis" : [0,0,1],
+      "scale" : [2,2,2]
+    },
+    "two" : {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [-2.0, 2.0, -10.0],
+      "rotateDegree" : 45,
+      "rotateAxis" : [1,0,0],
+      "scale" : [1,1,1]
+    },
+    "three" : {
+      "ObjFilename"  : "Examples/MickeyMouse.obj",
+      "translate" : [8.0, 0.0, -5.0],
+      "rotateDegree" : 0,
+      "rotateAxis" : [1,0,0],
+      "scale" : [0.01,0.01,0.01]
+    }
+  },
+
+  "Sphere" : {
+    "one" : {
+      "material" : {
+        "ka" : [0.24725, 0.1995,	0.0745],
+        "kd" : [0.75164, 0.60648, 0.22648],
+        "ks" : [0.628281,	0.555802,	0.366065],
+        "n"  : 40,
+        "reflect" : 0
+      },
+      "center"   : [0, 0, -50],
+      "radius"   : 10,
+      "name"     : "sphere1"
+    },
+
+    "two" : {
+      "material" : {
+        "ka" : [0.25,	0.20725,	0.20725],
+        "kd" : [1,	0.829,	0.829],
+        "ks" : [0.296648,	0.296648,	0.296648],
+        "n"  : 8,
+        "reflect" : 0.9
+      },
+      "center"   : [20, -5, -50],
+      "radius"   : 5,
+      "name"     : "sphere2"
+    },
+
+    "three" : {
+      "material" : {
+        "ka" : [0.05375,	0.05,	0.06625],
+        "kd" : [0.18275,	0.17,	0.22525],
+        "ks" : [0.332741,	0.328634,	0.346435],
+        "n"  : 30,
+        "reflect" : 0
+      },
+      "center"   : [-9, 9, -50],
+      "radius"   : 5,
+      "name"     : "sphere3"
+    },
+
+    "four" : {
+      "material" : {
+        "ka" : [0.1745,	0.01175,	0.01175],
+        "kd" : [0.61424,	0.04136,	0.04136],
+        "ks" : [0.727811,	0.626959,	0.626959],
+        "n"  : 60,
+        "reflect" : 0
+      },
+      "center"   : [9, 9, -50],
+      "radius"   : 5,
+      "name"     : "sphere4"
+    },
+
+    "five" : {
+      "material" : {
+        "ka" : [0.25,	0.20725,	0.20725],
+        "kd" : [1,	0.829,	0.829],
+        "ks" : [0.296648,	0.296648,	0.296648],
+        "n"  : 8,
+        "reflect" : 0.9
+      },
+      "center"   : [0, 30, -60],
+      "radius"   : 10,
+      "name"     : "sphere5"
+    }
+
+  },
+
+  "Lights" : {
+    "one" : {
+      "position" : [0, 30, 20],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [1, 1, 1],
+      "is"       : [0.5, 0.5, 0.5],
+      "ac"       : 1.0,
+      "al"       : 0.5,
+      "aq"       : 0.01,
+      "Type"     : "Point"
+    },
+
+    "two" : {
+      "direction" : [1, -1, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.5, 0.5, 0.5],
+      "is"       : [0.5, 0.5, 0.5],
+      "Type"     : "Directional"
+    },
+
+    "three" : {
+      "position" : [0, 30, 20],
+      "direction": [1, -1, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [1, 1, 1],
+      "is"       : [0.5, 0.5, 0.5],
+      "ac"       : 1.0,
+      "al"       : 0.5,
+      "aq"       : 0.01,
+      "aa"       : 0.5,
+      "cutoff"   : 60,
+      "Type"     : "Spotlight"
+    }
+  },
+
+  "Camera" : {
+    "eye" : [0,0,0],
+    "u"   : [1,0,0],
+    "v"   : [0,1,0],
+    "d"   : 10,
+    "theta" : 60,
+    "width" : 1360,
+    "height" : 768,
+    "orthographic" : false,
+    "near" : 1.0,
+    "far" : 100.0,
+    "yaw" : -90.0,
+    "pitch" : 1.0,
+    "cs" : 0.05,
+    "ds" : 0.5
+  },
+
+  "Options" : {
+    "ia"       : [1.0,1.0,1.0],
+    "antiAliasing" : false,
+    "numberRays" : 9,
+    "idealReflect" : false,
+    "reflectDepth" : 4,
+    "vertShader" : "Shaders/passthrough.vert",
+    "fragShader" : "Shaders/passthrough.frag"
+  }
+}
+
+"Sphere" : {
+  "one" : {
+    "material" : {
+      "ka" : [0.24725, 0.1995,	0.0745],
+      "kd" : [0.75164, 0.60648, 0.22648],
+      "ks" : [0.628281,	0.555802,	0.366065],
+      "n"  : 40,
+      "reflect" : 0
+    },
+    "center"   : [-10, 2, 20],
+    "radius"   : 10,
+    "precision"     : 48,
+    "scale"    : [10,10,10], 
+    "name"     : "sphere1"
+  }
+
+},
+"2" : {
+  "position" : [-15, -5, 10],
+  "direction": [0, -1, 0],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "ac"       : 1.0,
+  "al"       : 0.2,
+  "aq"       : 0.01,
+  "aa"       : 6,
+  "cutoff"   : 45,
+  "Type"     : "Spotlight"
+},
+"4" : {
+  "position" : [15, -5, 10],
+  "direction": [0, -1, 0],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "ac"       : 1.0,
+  "al"       : 0.5,
+  "aq"       : 0.01,
+  "aa"       : 10,
+  "cutoff"   : 30,
+  "Type"     : "Spotlight"
+},
+"5" : {
+  "direction" : [1, 0, 0],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "Type"     : "Directional"
+},
+"6" : {
+  "direction" : [-1, 0, 0],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "Type"     : "Directional"
+},
+"7" : {
+  "direction" : [0, 0, -1],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "Type"     : "Directional"
+},
+"8" : {
+  "direction" : [0, 0, 1],
+  "ia"       : [1.0,1.0,1.0],
+  "id"       : [0.8, 0.8, 0.8],
+  "is"       : [0.5, 0.5, 0.5],
+  "Type"     : "Directional"
+}
+
+
+"one" : {
+  "ObjFilename"  : "Examples/cube.obj",
+  "translate" : [-8, 1, -10],
+  "rotateDegree" : 0,
+  "rotateAxis" : [0,0,1],
+  "scale" : [1,1,1]
+},
+"two" : {
+  "ObjFilename"  : "Examples/cube.obj",
+  "translate" : [5, 20, -10],
+  "rotateDegree" : 0,
+  "rotateAxis" : [0,0,1],
+  "scale" : [1,1,1]
+},
+"three": {
+  "ObjFilename"  : "Examples/cube.obj",
+  "translate" : [-15, -5, 10],
+  "rotateDegree" : 0,
+  "rotateAxis" : [0,0,1],
+  "scale" : [1,1,1]
+},
+"four": {
+  "ObjFilename"  : "Examples/cube.obj",
+  "translate" : [15, -5, 10],
+  "rotateDegree" : 0,
+  "rotateAxis" : [0,0,1],
+  "scale" : [1,1,1]
+}

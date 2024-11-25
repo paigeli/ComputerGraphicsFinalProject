@@ -1,0 +1,11 @@
+newmtl emerald
+
+Ns 8.0000
+Ka 0.2	0.2 0.2
+Kd 0.07568 0.61424 0.07568
+Ks 0.633 0.727811 0.633
+map_Kd Examples/wood2.png
+map_Ks Examples/container2_specular.png
+map_NM Examples/toy_box_normal.png
+map_DM Examples/toy_box_disp.png
+map_EM Examples/Emission.png

@@ -1,0 +1,278 @@
+{
+  "RenderOption" : "Rasterization",
+
+  "Material" : {
+
+  },
+
+  "Plane" :  {
+    "Ground" : {
+      "material" : {
+        "ka" : [0.0,	0.05,	0.05],
+        "kd" : [0.4,	0.5,	0.5],
+        "ks" : [0.04,	0.7,	0.7],
+        "n"  : 10,
+        "reflect" : 0,
+        "mapKd"    : "Examples/marble.jpg",
+        "mapKs"    : "Examples/marble.jpg",
+        "mapNM"    : "Examples/normalMapping.png",
+        "mapDM"    : "Examples/ParallaxMapping.jpg",
+        "mapEM"    : ""
+      },
+      "center"   : [0, -10, -10],
+      "normal"   : [0,1,0],
+      "width"    : 1,
+      "height"   : 1,
+      "rotateDegree" : 0,
+      "rotateAxis" : [1,0,0],
+      "lineWidth"  : 1.0,
+      "scale"    : [50, 50, 50],
+      "name"     : "ground"
+    }
+  },
+  "Window":{
+    
+  },
+
+  "Mesh" : {
+    "one" : {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [5, 1, -10],
+      "rotateDegree" : 0,
+      "rotateAxis" : [0,0,1],
+      "scale" : [10,10,10]
+    }
+  },
+
+  "Sphere" : {
+    "one" : {
+      "material" : {
+        "ka" : [0.24725, 0.1995,	0.0745],
+        "kd" : [0.75164, 0.60648, 0.22648],
+        "ks" : [0.628281,	0.555802,	0.366065],
+        "n"  : 20,
+        "reflect" : 0,
+        "mapKd"    : "Examples/solar.jpg",
+        "mapKs"    : "Examples/solar.jpg",
+        "mapNM"    : "Examples/SphereNM.jpeg",
+        "mapDM"    : "",
+        "mapEM"    : "Examples/Emission.jpg"
+      },
+      "center"   : [-8, 1, -10],
+      "radius"   : 10,
+      "precision"     : 48,
+      "scale"    : [5,5,5], 
+      "name"     : "sphere1"
+    }
+  },
+  "Lamp" : {
+    "two" : {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [5, 20, -10],
+      "rotateDegree" : 0,
+      "rotateAxis" : [0,0,1],
+      "scale" : [1,1,1]
+    },
+    "three": {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [-15, -5, 10],
+      "rotateDegree" : 0,
+      "rotateAxis" : [0,0,1],
+      "scale" : [1,1,1]
+    },
+    "four": {
+      "ObjFilename"  : "Examples/cube.obj",
+      "translate" : [15, -5, 10],
+      "rotateDegree" : 0,
+      "rotateAxis" : [0,0,1],
+      "scale" : [1,1,1]
+    }
+  },
+  "ParticleSystem" :{
+    "one" : {
+      "Psize" : 20.0,
+      "Size" : 100,
+      "Generator" : {
+        "Type" : "Uniform",
+        "xMin" : 15,
+        "yMin" : 15,
+        "zMin" : -20,
+        "xMax" : 20,
+        "yMax" : 20,
+        "zMax" : -10
+      },
+      "Attraction" : {
+        "Name" : "Attraction",
+        "goal" : [0,0,-10],
+        "Coefficient" : 0
+      },
+      "Gravity" : {
+        "Name" : "Gravity",
+        "Coefficient" : 0.5
+      },
+      "ConstantForce" : {
+        "Name" : "ConstantForce",
+        "force" : 0.98,
+        "direction" : [1,-1,0],
+        "Coefficient" : 0
+      },
+      "Drag" : {
+        "Name" : "Drag",
+        "Coefficient" : 0.5
+      },
+      "Repulsion" : {
+        "Name" : "Repulsion",
+        "goal" : [5,-5,-10],
+        "Coefficient" : 0.5
+      }
+    },
+    "two" : {
+      "Psize" : 5.0,
+      "Size" : 100,
+      "Generator" : {
+        "Type" : "Normal",
+        "xMean" : -15,
+        "yMean" : 15,
+        "zMean" : -10,
+        "xSd" : 3,
+        "ySd" : 3,
+        "zSd" : 3
+      },
+      "Attraction" : {
+        "Name" : "Attraction",
+        "goal" : [-5,-5,-10],
+        "Coefficient" : 0.4
+      },
+      "Gravity" : {
+        "Name" : "Gravity",
+        "Coefficient" : 0.3
+      },
+      "ConstantForce" : {
+        "Name" : "ConstantForce",
+        "force" : 0.98,
+        "direction" : [-1,1,0],
+        "Coefficient" : 0.2
+      },
+      "Drag" : {
+        "Name" : "Drag",
+        "Coefficient" : 0.1
+      },
+      "Repulsion" : {
+        "Name" : "Repulsion",
+        "goal" : [5,-10,0],
+        "Coefficient" : 0
+      }
+    }
+
+  },
+
+  "Lights" : {
+    "1" : {
+      "position" : [-8, 1, -10],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0, 0, 0],
+      "is"       : [0, 0, 0],
+      "ac"       : 1,
+      "al"       : 0,
+      "aq"       : 0,
+      "Type"     : "Point"
+    }, 
+    "3" : {
+      "position" : [5, 20, -10],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.8, 0.8, 0.8],
+      "is"       : [0.5, 0.5, 0.5],
+      "ac"       : 1,
+      "al"       : 0,
+      "aq"       : 0,
+      "Type"     : "Point"
+    }, 
+    "2" : {
+      "position" : [-15, -5, 10],
+      "direction": [0, -1, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.8, 0.8, 0.8],
+      "is"       : [0.5, 0.5, 0.5],
+      "ac"       : 1.0,
+      "al"       : 0.2,
+      "aq"       : 0.01,
+      "aa"       : 6,
+      "cutoff"   : 45,
+      "Type"     : "Spotlight"
+    },
+    "4" : {
+      "position" : [15, -5, 10],
+      "direction": [0, -1, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.8, 0.8, 0.8],
+      "is"       : [0.5, 0.5, 0.5],
+      "ac"       : 1.0,
+      "al"       : 0.5,
+      "aq"       : 0.01,
+      "aa"       : 10,
+      "cutoff"   : 30,
+      "Type"     : "Spotlight"
+    },
+    "5" : {
+      "direction" : [1, 0, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.5, 0.5, 0.5],
+      "is"       : [0.5, 0.5, 0.5],
+      "Type"     : "Directional"
+    },
+    "6" : {
+      "direction" : [-1, 0, 0],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.5, 0.5, 0.5],
+      "is"       : [0.5, 0.5, 0.5],
+      "Type"     : "Directional"
+    },
+    "7" : {
+      "direction" : [0, 0, -1],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.5, 0.5, 0.5],
+      "is"       : [0.5, 0.5, 0.5],
+      "Type"     : "Directional"
+    },
+    "8" : {
+      "direction" : [0, 0, 1],
+      "ia"       : [1.0,1.0,1.0],
+      "id"       : [0.5, 0.5, 0.5],
+      "is"       : [0.5, 0.5, 0.5],
+      "Type"     : "Directional"
+    }
+
+    
+  },
+
+  "Camera" : {
+    "eye" : [0,10,20],
+    "u"   : [1,0,0],
+    "v"   : [0,1,0],
+    "lookat" : [0,0,-1],
+    "up"  : [0,1,0],
+    "d"   : 20,
+    "theta" : 60,
+    "width" : 1360,
+    "height" : 768,
+    "orthographic" : false,
+    "near" : 1.0,
+    "far" : 100.0,
+    "yaw" : -90.0,
+    "pitch" : 0.0,
+    "cs" : 0.5,
+    "ds" : 0.5
+  },
+
+  "Options" : {
+    "ia"       : [0.5,0.5,0.5],
+    "antiAliasing" : false,
+    "numberRays" : 9,
+    "idealReflect" : false,
+    "reflectDepth" : 4,
+    "vertShader" : "Shaders/passthrough.vert",
+    "fragShader" : "Shaders/passthrough.frag",
+    "fogColor"   : [0.5,0.5,0.5],
+    "fogDensity" : 0
+  }
+}
